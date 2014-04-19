@@ -1,2 +1,1 @@
-wordpress-theme-caramel
-=======================
+# Caramel

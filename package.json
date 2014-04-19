@@ -1,0 +1,20 @@
+{
+  "name": "wordpress-theme-caramel",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Yet another WordPress theme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tommy351/wordpress-theme-caramel.git"
+  },
+  "author": "Tommy Chen <tommy351@gmail.com> (http://zespia.tw)",
+  "license": {
+    "type": "MIT",
+    "url": "https://raw.github.com/tommy351/wordpress-theme-caramel/master/LICENSE"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.1",
+    "gulp-stylus": "^0.2.1",
+    "nib": "^1.0.2"
+  }
+}
