@@ -12,5 +12,39 @@ Text Domain: caramel
 */
 
 @import "nib"
+@import "_variables"
 
 global-reset()
+
+*, *:before, *:after
+  box-sizing: border-box
+
+body
+  background: color-background
+  font: font-size font-sans
+  color: color-text
+
+a
+  color: color-highlight
+  text-decoration: none
+
+#main
+  clearfix()
+  width: main-width
+  margin: 0 auto
+
+#content
+  float: right
+  width: main-width - sidebar-width
+  padding: 100px 0 40px 30px
+
+.alignleft
+  float: left
+
+.alignright
+  float: right
+
+@import "_partial/header"
+@import "_partial/article"
+@import "_partial/archive"
+@import "_partial/footer"

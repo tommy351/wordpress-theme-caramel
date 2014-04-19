@@ -3,7 +3,7 @@ var gulp = require('gulp'),
   nib = require('nib');
 
 gulp.task('stylus', function(){
-  gulp.src('./styl/style.styl')
+  gulp.src('styl/style.styl')
     .pipe(stylus({
       use: [nib()]
     }))
@@ -11,7 +11,7 @@ gulp.task('stylus', function(){
 });
 
 gulp.task('dev', function(){
-  gulp.watch('./styl/**/*.styl', ['stylus']);
+  gulp.watch('styl/**/*.styl', ['stylus']);
 });
 
 gulp.task('default', ['stylus']);

@@ -1,0 +1,19 @@
+#page-nav
+  padding-bottom: 70px
+  text-align: center
+  .page-numbers
+    background: darken(color-background, 5%)
+    color: color-text
+    margin: 0 10px
+    padding: 5px 10px
+    font-size: 0.9em
+
+    &.dots
+      background: none
+    &.current
+      font-weight: bold
+      background: darken(color-background, 10%)
+  a.page-numbers
+    transition: background 0.2s
+    &:hover
+      background: darken(color-background, 10%)
