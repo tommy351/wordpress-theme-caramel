@@ -8,14 +8,12 @@ if (get_header_image()) : ?>
 <?php
 endif;
 
-if (have_posts()){
-  while (have_posts()){
-    the_post();
-    get_template_part('content', get_post_format());
+while (have_posts()){
+  the_post();
+  get_template_part('content', 'page');
+  if (comments_open() || get_comments_number()){
+    comments_template();
   }
-  caramel_paging_nav();
-} else {
-  get_template_part('content', 'none');
 }
 ?>
 <?php get_footer(); ?>

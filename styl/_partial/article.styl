@@ -7,6 +7,8 @@ article
   line-height: line-height-title
   display: block
   margin-bottom: 1em
+  color: color-highlight
+  word-wrap: break-word
 
 .article-entry
   line-height: line-height
@@ -80,7 +82,9 @@ article
   img, video, .wp-caption
     max-width: 100%
     height: auto
-  img
+  figure
+    margin: 0
+  img, figure
     &.alignleft
       margin: 0.5em 1.5em 0.5em 0
     &.alignright
@@ -109,3 +113,38 @@ article
     cite
       display: block
       text-align: right
+  .more-link
+    color: color-text
+    background: darken(color-background, 5%)
+    padding: 5px 15px
+    border-radius: 15px
+    transition: background 0.2s
+    &:hover
+      text-decoration: none
+      background: darken(color-background, 10%)
+
+.article-categories
+  font-size: 0.9em
+  padding-bottom: line-height * 0.5
+  line-height: line-height
+
+.article-footer
+  text-align: center
+  font-size: 0.9em
+  padding-top: line-height
+  line-height: line-height
+  a
+    font-weight: bold
+    padding: 0 10px
+    display: inline-block
+
+.article-meta
+  a
+    border-left: 1px solid color-border
+    &:first-child
+      border: none
+
+.article-tags
+  a
+    &:before
+      content: "#"

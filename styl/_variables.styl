@@ -9,9 +9,23 @@ color-border = darken(color-background, 10%)
 font-sans = "Helvetica Neue", Helvetica, Arial, sans-serif
 font-serif = Georgia, "Times New Roman", serif
 font-mono = Consolas, Monaco, Menlo, Consolas, monospace
+font-icon = FontAwesome
 font-size = 14px
 line-height = 1.7em
 line-height-title = 1.2em
+
+font-icon-path = "fonts/fontawesome-webfont"
+font-icon-version = "4.0.3"
+
+@font-face
+  font-family: FontAwesome
+  font-style: normal
+  font-weight: normal
+  src: url(font-icon-path + ".eot?v=#" + font-icon-version)
+  src: url(font-icon-path + ".eot?#iefix&v=#" + font-icon-version) format("embedded-opentype"),
+       url(font-icon-path + ".woff?v=#" + font-icon-version) format("woff"),
+       url(font-icon-path + ".ttf?v=#" + font-icon-version) format("truetype"),
+       url(font-icon-path + ".svg#fontawesomeregular?v=#" + font-icon-version) format("svg")
 
 // Layout
 main-width = 960px

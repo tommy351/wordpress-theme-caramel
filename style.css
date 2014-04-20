@@ -10,6 +10,13 @@ License URI: https://raw.github.com/tommy351/wordpress-theme-caramel/master/LICE
 Tags: light, two-columns, left-sidebar, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, sticky-post, theme-options, translation-ready
 Text Domain: caramel
 */
+@font-face {
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  src: url("fonts/fontawesome-webfont.eot?v=#4.0.3");
+  src: url("fonts/fontawesome-webfont.eot?#iefix&v=#4.0.3") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff?v=#4.0.3") format("woff"), url("fonts/fontawesome-webfont.ttf?v=#4.0.3") format("truetype"), url("fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.0.3") format("svg");
+}
 html,
 body,
 div,
@@ -193,17 +200,16 @@ a {
 }
 #banner {
   padding-bottom: 100px;
+  position: relative;
 }
 #banner-img {
-  background-color: #efe1c3;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: banner-height;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  background-color: #efe1c3;
 }
 article {
   padding-bottom: 100px;
@@ -214,6 +220,8 @@ article {
   line-height: 1.2em;
   display: block;
   margin-bottom: 1em;
+  color: #e94e77;
+  word-wrap: break-word;
 }
 .article-entry {
   line-height: 1.7em;
@@ -337,10 +345,15 @@ article {
   max-width: 100%;
   height: auto;
 }
-.article-entry img.alignleft {
+.article-entry figure {
+  margin: 0;
+}
+.article-entry img.alignleft,
+.article-entry figure.alignleft {
   margin: 0.5em 1.5em 0.5em 0;
 }
-.article-entry img.alignright {
+.article-entry img.alignright,
+.article-entry figure.alignright {
   margin: 0.5em 0 0.5em 1.5em;
 }
 .article-entry figcaption {
@@ -378,6 +391,47 @@ article {
   display: block;
   text-align: right;
 }
+.article-entry .more-link {
+  color: #c6a49a;
+  background: #efe1c3;
+  padding: 5px 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -o-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.article-entry .more-link:hover {
+  text-decoration: none;
+  background: #ebd8b1;
+}
+.article-categories {
+  font-size: 0.9em;
+  padding-bottom: 0.85em;
+  line-height: 1.7em;
+}
+.article-footer {
+  text-align: center;
+  font-size: 0.9em;
+  padding-top: 1.7em;
+  line-height: 1.7em;
+}
+.article-footer a {
+  font-weight: bold;
+  padding: 0 10px;
+  display: inline-block;
+}
+.article-meta a {
+  border-left: 1px solid #ebd8b1;
+}
+.article-meta a:first-child {
+  border: none;
+}
+.article-tags a:before {
+  content: "#";
+}
 #page-nav {
   padding-bottom: 70px;
   text-align: center;
@@ -408,4 +462,10 @@ article {
 }
 #footer {
   font-size: 0.9em;
+}
+#copyright {
+  line-height: 1.7em;
+}
+#copyright a:hover {
+  text-decoration: underline;
 }

@@ -6,7 +6,7 @@ if (!isset($content_width)){
 
 function caramel_setup(){
   // Translation support
-  load_theme_textdomain( 'twentyfourteen', get_template_directory() . '/languages' );
+  load_theme_textdomain('caramel', get_template_directory() . '/languages');
 
   // Add RSS feed links to <head> for posts and comments
   add_theme_support('automatic_feed_links');
@@ -52,7 +52,7 @@ function caramel_wp_title($title, $sep){
 
   // Add a page number if necessary.
   if ($paged >= 2 || $page >= 2){
-    $title = "$title $sep " . sprintf(__('Page %s', 'twentyfourteen'), max($paged, $page));
+    $title = "$title $sep " . sprintf(__('Page %s', 'caramel'), max($paged, $page));
   }
 
   return $title;
