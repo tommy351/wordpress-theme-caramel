@@ -1,0 +1,244 @@
+#comments
+  padding-bottom: 100px
+
+.comment
+  padding-top: 25px
+  margin-bottom: 25px
+  position: relative
+  border-top: 1px solid color-border
+  &.depth-1:last-of-type
+    border-bottom: 1px solid color-border
+  .children
+    margin-left: 40px
+
+$comment-avatar
+  width: 40px
+  height: 40px
+  border-radius: 50%
+  overflow: hidden
+  background: darken(color-background, 5%)
+  img
+    width: 100%
+    height: 100%
+
+.comment-avatar
+  @extend $comment-avatar
+  position: absolute
+  top: 25px
+  left: 0
+
+.comment-content
+  padding-left: 60px
+
+.comment-header
+  clearfix()
+  margin-bottom: 1em
+
+.comment-author
+  color: color-highlight
+  font-weight: bold
+  display: block
+  float: left
+
+.comment-date
+  font-size: 0.8em
+  display: block
+  float: right
+  margin-left: 6px
+
+$comment-fn-link
+  hide-text()
+  margin-right: 12px
+  display: block
+  float: right
+  position: relative
+  width: 14px
+  height: 14px
+  color: color-text
+  opacity: 0.5
+  transition: opacity 0.2s
+  &:hover
+    opacity: 1
+  &:before
+    font: 14px font-icon
+    position: absolute
+    text-indent: 0
+    top: 0
+    left: 0
+    text-align: center
+    line-height: 14px
+
+.comment-reply-link
+  @extend $comment-fn-link
+  &:before
+    content: "\f112"
+
+.comment-quote-link
+  @extend $comment-fn-link
+  cursor: pointer
+  &:before
+    content: "\f079"
+
+.comment-edit-link
+  @extend $comment-fn-link
+  &:before
+    content: "\f040"
+
+.comment-respond
+  position: relative
+
+#cancel-comment-reply-link
+  hide-text()
+  position: absolute
+  top: 0
+  right: 0
+  width: 18px
+  height: 18px
+  color: color-text
+  opacity: 0.6
+  transition: opacity 0.2s
+  &:hover
+    opacity: 1
+  &:before
+    content: "\f00d"
+    font: 18px font-icon
+    text-align: center
+    line-height: 18px
+    text-indent: 0
+    position: absolute
+    top: 0
+    left: 0
+
+$comment-form-input
+  position: relative
+  margin-bottom: 10px
+  margin-right: 20px
+  width: 200px
+  float: left
+  &:before
+    position: absolute
+    top: 0
+    left: 0
+    text-align: center
+    font: font-size font-icon
+    line-height: line-height
+    opacity: 0.5
+  input
+    background: none
+    border: none
+    outline: none
+    border-bottom: 1px solid color-border
+    font: 14px font-sans
+    color: color-text
+    line-height: line-height
+    width: 100%
+    padding-left: 20px
+  label
+    position: absolute
+    top: 0
+    left: 0
+    line-height: line-height
+    transition: 0.3s
+    padding-left: 20px
+    cursor: text
+    .required
+      color: color-highlight
+  &.focus, &.unblank
+    label
+      line-height: 1em
+      top: -1.2em
+      opacity: 0.6
+      transform: scale(0.85)
+      transform-origin: top left
+
+.comment-form
+  padding-top: 30px
+
+.comment-form-author
+  @extend $comment-form-input
+  &:before
+    content: "\f007"
+
+.comment-form-email
+  @extend $comment-form-input
+  &:before
+    content: "\f0e0"
+
+.comment-form-url
+  @extend $comment-form-input
+  &:before
+    content: "\f0c1"
+
+.comment-form-comment
+  clear: both
+  border: 1px solid color-border
+  background: lighten(color-background, 20%)
+  border-radius: 3px
+
+.comment-form-link
+  float: left
+  margin: 8px 10px
+  font-size: 0.8em
+  color: color-text
+  cursor: pointer
+  opacity: 0.6
+  &:hover
+    opacity: 1
+
+#comment
+  clear: both
+  width: 100%
+  background: none
+  border: none
+  outline: none
+  padding: 10px
+  font: font-size font-icon
+  line-height: line-height
+  color: color-text
+  min-width: 100%
+  max-height: 100%
+
+.form-submit
+  clearfix()
+  padding-top: 20px
+  input[type="submit"]
+    float: right
+    background: darken(color-background, 5%)
+    color: color-text
+    font: font-size font-sans
+    padding: 6px 12px
+    border: none
+    transition: background 0.2s
+    cursor: pointer
+    border-radius: 2px
+    &:hover, &:focus
+      background: darken(color-background, 10%)
+
+.logged-in-as
+  clearfix()
+  padding-bottom: 10px
+
+.logged-in-as-avatar
+  @extend $comment-avatar
+  float: left
+  margin-right: 20px
+
+.logged-in-as-header
+  padding-top: 3px
+
+.logged-in-as-name
+  font-weight: bold
+  line-height: 1em
+
+.logged-in-as-links
+  clearfix()
+
+.logged-in-as-link
+  color: color-text
+  font-size: 0.8em
+  margin-top: 0.5em
+  display: block
+  float: left
+  margin-right: 15px
+  &:hover
+    color: color-highlight

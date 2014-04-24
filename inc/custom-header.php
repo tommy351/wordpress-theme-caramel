@@ -2,7 +2,7 @@
 function caramel_custom_header_setup(){
   add_theme_support('custom-header', apply_filters('caramel_custom_header_args', array(
     'default-text-color' => 'fff',
-    'width' => 650,
+    'width' => 740,
     'height' => 250,
     'flex-height' => true,
     'wp-head-callback' => 'caramel_header_style',
