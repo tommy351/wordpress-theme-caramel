@@ -1,7 +1,14 @@
 #header
-  width: sidebar-width
-  float: left
-  padding: 100px 30px 100px 0
+  padding: 100px 0 40px
+  @media mq-normal
+    width: sidebar-width
+    float: left
+    padding-right: gutter-width
+
+#logo-wrap
+  text-align: center
+  @media mq-normal
+    text-align: left
 
 #logo
   color: color-highlight
@@ -13,6 +20,9 @@
 #tagline
   margin-top: 20px
   line-height: line-height
+  text-align: center
+  @media mq-normal
+    text-align: left
 
 #banner
   padding-bottom: 100px

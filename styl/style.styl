@@ -30,6 +30,7 @@ body
   background: color-background
   font: font-size font-sans
   color: color-text
+  -webkit-text-size-adjust: 100%
 
 a
   color: color-highlight
@@ -37,13 +38,16 @@ a
 
 #main
   clearfix()
-  width: main-width
   margin: 0 auto
+  padding: 0 gutter-width
+  max-width: main-width + gutter-width * 2
 
 #content
-  float: right
-  width: main-width - sidebar-width
-  padding: 100px 0 40px 30px
+  padding: 100px 0 40px
+  @media mq-normal
+    padding-left: gutter-width
+    float: left
+    width: 100% - sidebar-width
 
 .alignleft
   float: left

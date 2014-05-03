@@ -10,7 +10,7 @@
 <body <?php body_class(); ?>>
 <div id="main">
 <header id="header">
-  <h1>
+  <h1 id="logo-wrap">
     <a href="<?= esc_url(home_url('/')); ?>" rel="home" id="logo"><?php bloginfo('name'); ?></a>
   </h1>
   <h2 id="tagline"><?php bloginfo('description'); ?></h2>

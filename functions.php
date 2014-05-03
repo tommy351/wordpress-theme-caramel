@@ -1,7 +1,7 @@
 <?php
 
 if (!isset($content_width)){
-  $content_width = 740;
+  $content_width = 770;
 }
 
 function caramel_setup(){
