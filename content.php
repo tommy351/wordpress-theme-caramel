@@ -24,7 +24,7 @@
       </a>
       <?php
       if (comments_open() || get_comments_number()){
-        comments_popup_link(__('Comments', 'caramel'), __('1 comment', 'caramel'), __('% comments', 'caramel'), 'article-comment-link');
+        comments_popup_link(__('Comments', 'caramel'), __('1 Comment', 'caramel'), __('% Comments', 'caramel'), 'article-comment-link');
       }
       ?>
     </div>
