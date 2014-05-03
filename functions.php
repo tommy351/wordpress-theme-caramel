@@ -76,6 +76,20 @@ function caramel_search_form($form){
 
 add_filter('get_search_form', 'caramel_search_form');
 
+function caramel_widgets_init(){
+  register_sidebar(array(
+    'name' => __('Primary Sidebar', 'caramel'),
+    'id' => 'primary',
+    'description' => __('Main sidebar that appears on the left.', 'caramel'),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>'
+  ));
+}
+
+add_action('widgets_init', 'caramel_widgets_init');
+
 // Implement Custom Header features.
 require get_template_directory() . '/inc/custom-header.php';
 

@@ -1,0 +1,74 @@
+.widget
+  margin: 30px 0
+  line-height: line-height
+  a
+    &:hover
+      text-decoration: underline
+  strong, b
+    font-weight: bold
+  em, cite, address
+    font-style: italice
+  sup, sub
+    font-size: 0.75em
+    line-height: 0
+    position: relative
+    vertical-align: baseline
+  sup
+    top: -0.5em
+  sub
+    bottom: -0.2em
+  small
+    font-size: 0.85em
+  acronym, abbr
+    border-bottom: 1px dotted
+    cursor: help
+  dt
+    font-weight: bold
+  ul, ol
+    list-style: none
+    ul, ol
+      margin-left: 20px
+    ul
+      list-style: disc
+    ol
+      list-style: decimal
+  table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+  img, video, .wp-caption
+    max-width: 100%
+    height: auto
+  iframe
+    border: none
+  big
+    font-size: 125%
+
+.widget-title
+  font-weight: bold
+  font-size: 0.85em
+  padding-bottom: 1em
+  line-height: line-height-title
+
+.widget_nav_menu
+  .menu-item
+    .sub-menu
+      display: none // hide sub-menu temporarily
+    a
+      color: color-highlight
+      text-decoration: none
+      font-weight: bold
+
+#search-form-input
+  color: color-text
+  background: darken(color-background, 5%)
+  border: none
+  width: 100%
+  border-radius: 15px
+  padding: 7px 15px
+  font-size: 0.9em
+  font-family: font-sans
+  outline: none
+  transition: background 0.2s
+  &:focus
+    background: darken(color-background, 10%)

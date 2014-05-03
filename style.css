@@ -7,7 +7,7 @@ Description: Caramel
 Version: 1.0
 License: MIT License
 License URI: https://raw.github.com/tommy351/wordpress-theme-caramel/master/LICENSE
-Tags: light, two-columns, left-sidebar, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, microformats, post-formats, sticky-post, theme-options, translation-ready
+Tags: light, two-columns, left-sidebar, responsive-layout, custom-background, custom-header, custom-menu, featured-images, flexible-header, microformats, post-formats, sticky-post, theme-options, translation-ready
 Text Domain: caramel
 */
 @font-face {
@@ -172,39 +172,6 @@ a {
 #tagline {
   margin-top: 20px;
   line-height: 1.7em;
-}
-#main-nav {
-  margin-top: 30px;
-}
-#main-nav a {
-  color: #e94e77;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  line-height: 1.2em;
-  margin-bottom: 0.6em;
-}
-#search-form {
-  margin-top: 30px;
-}
-#search-form-input {
-  color: #c6a49a;
-  background: #efe1c3;
-  border: none;
-  width: 100%;
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
-  padding: 7px 15px;
-  font-size: 0.9em;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  outline: none;
-  -webkit-transition: background 0.2s;
-  -moz-transition: background 0.2s;
-  -ms-transition: background 0.2s;
-  transition: background 0.2s;
-}
-#search-form-input:focus {
-  background: #ebd8b1;
 }
 #banner {
   padding-bottom: 100px;
@@ -709,7 +676,7 @@ article {
 }
 #comment {
   clear: both;
-  width: 100%;
+  width: 100% !important;
   background: none;
   border: none;
   outline: none;
@@ -790,6 +757,114 @@ article {
 }
 .logged-in-as-link:hover {
   color: #e94e77;
+}
+.widget {
+  margin: 30px 0;
+  line-height: 1.7em;
+}
+.widget a:hover {
+  text-decoration: underline;
+}
+.widget strong,
+.widget b {
+  font-weight: bold;
+}
+.widget em,
+.widget cite,
+.widget address {
+  font-style: italice;
+}
+.widget sup,
+.widget sub {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.widget sup {
+  top: -0.5em;
+}
+.widget sub {
+  bottom: -0.2em;
+}
+.widget small {
+  font-size: 0.85em;
+}
+.widget acronym,
+.widget abbr {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+.widget dt {
+  font-weight: bold;
+}
+.widget ul,
+.widget ol {
+  list-style: none;
+}
+.widget ul ul,
+.widget ol ul,
+.widget ul ol,
+.widget ol ol {
+  margin-left: 20px;
+}
+.widget ul ul,
+.widget ol ul {
+  list-style: disc;
+}
+.widget ul ol,
+.widget ol ol {
+  list-style: decimal;
+}
+.widget table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.widget img,
+.widget video,
+.widget .wp-caption {
+  max-width: 100%;
+  height: auto;
+}
+.widget iframe {
+  border: none;
+}
+.widget big {
+  font-size: 125%;
+}
+.widget-title {
+  font-weight: bold;
+  font-size: 0.85em;
+  padding-bottom: 1em;
+  line-height: 1.2em;
+}
+.widget_nav_menu .menu-item .sub-menu {
+  display: none;
+}
+.widget_nav_menu .menu-item a {
+  color: #e94e77;
+  text-decoration: none;
+  font-weight: bold;
+}
+#search-form-input {
+  color: #c6a49a;
+  background: #efe1c3;
+  border: none;
+  width: 100%;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  padding: 7px 15px;
+  font-size: 0.9em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  outline: none;
+  -webkit-transition: background 0.2s;
+  -moz-transition: background 0.2s;
+  -ms-transition: background 0.2s;
+  transition: background 0.2s;
+}
+#search-form-input:focus {
+  background: #ebd8b1;
 }
 #footer {
   font-size: 0.9em;

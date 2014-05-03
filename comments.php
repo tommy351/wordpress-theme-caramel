@@ -10,7 +10,12 @@ if (post_password_required()){
   </ol>
   <?php if (get_comment_pages_count() > 1 && get_option('page_comments')) : ?>
   <nav class="page-nav" role="navigation">
-    <?php paginate_comments_links(); ?>
+    <?php
+    paginate_comments_links(array(
+      'prev_text' => '&#9664;',
+      'next_text' => '&#9654;'
+    ));
+    ?>
   </nav>
   <?php endif; // page_comments ?>
   <?php endif; // have_comments() ?>

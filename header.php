@@ -14,8 +14,7 @@
     <a href="<?= esc_url(home_url('/')); ?>" rel="home" id="logo"><?php bloginfo('name'); ?></a>
   </h1>
   <h2 id="tagline"><?php bloginfo('description'); ?></h2>
-  <nav id="main-nav" role="navigation">
-    <?php wp_nav_menu(array('theme_location' => 'primary', 'depth' => 1)); ?>
-  </nav>
-  <?php get_search_form(); ?>
+  <aside id="primary-aside">
+    <?php dynamic_sidebar('primary'); ?>
+  </aside>
 </header>
