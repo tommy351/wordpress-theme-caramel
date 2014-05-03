@@ -5,6 +5,7 @@ function caramel_custom_header_setup(){
     'width' => 770,
     'height' => 250,
     'flex-height' => true,
+    'header-text' => false,
     'wp-head-callback' => 'caramel_header_style',
     'admin-head-callback' => 'caramel_admin_header_style',
     'admin-preview-callback' => 'caramel_admin_header_image'
