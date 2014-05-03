@@ -6,4 +6,3 @@ while (have_posts()){
     comments_template();
   }
 }
-?>
