@@ -5,7 +5,7 @@
       <?= get_the_category_list(', '); ?>
     </div>
     <?php endif; ?>
-    <?php if (is_single()) : ?>
+    <?php if (is_singular()) : ?>
       <h1 class="article-title" itemprop="name"><?php the_title(); ?></h1>
     <?php else : ?>
       <h1 itemprop="name">
